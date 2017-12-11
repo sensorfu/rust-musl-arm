@@ -1,5 +1,7 @@
 # Cross compilation environment for Rust targeting Musl running on ARMv7
 
+**Docker Hub: https://hub.docker.com/r/sensorfu/rust-musl-arm/**
+
 This image uses [rust](https://hub.docker.com/_/rust/) Docker image and
 [musl-cross-make](https://github.com/richfelker/musl-cross-make) tool to build
 the C/C++ cross compilation environment.
@@ -54,10 +56,11 @@ Inside the image there are various environment variables set:
 * `CXX`: Points to ARMv7 GCC C++ compiler
 * `LD`: Points to ARMv7 GCC linker
 
-# Building the Docker image
+# Building and uploading the Docker image
 
 1. Fetch musl-cross-make sources into tree: `git submodule update --init`
-2. Build the docker image: `docker build -t rust-musl-arm .`
+2. Build the docker image: `docker build -t sensorfu/rust-musl-arm .`
+3. Push to Docker Hub: `docker push sensorfu/rust-musl-arm`
 
 # Licenses
 
