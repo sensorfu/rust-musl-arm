@@ -1,6 +1,6 @@
 
 REPOSITORY = sensorfu/rust-musl-arm
-VERSION = 1.26.2
+VERSION = 1.26.2-0
 
 build: Dockerfile
 	docker build -t $(REPOSITORY):latest -f $< .
