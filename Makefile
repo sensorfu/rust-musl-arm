@@ -1,6 +1,7 @@
-
 REPOSITORY = sensorfu/rust-musl-arm
-VERSION = 1.26.2-0
+
+# Rust version dash our container version
+VERSION = 1.27.1-0
 
 build: Dockerfile
 	docker build -t $(REPOSITORY):latest -f $< .
