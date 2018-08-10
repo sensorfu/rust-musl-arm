@@ -1,4 +1,4 @@
-FROM rust:1.27.1
+FROM rust:1.28.0
 
 COPY musl-cross-make/ /work/
 RUN cd /work && \
